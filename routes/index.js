@@ -22,6 +22,8 @@ router.get('/home', (req, res) => {
   }
 });
 
+
+
 // Página de cadastro
 router.get('/register', (req, res) => {
   res.render('register');  // Crie a visualização de registro, se necessário
