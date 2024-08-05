@@ -27,6 +27,26 @@ router.get('/register', (req, res) => {
   res.render('register');  // Crie a visualização de registro, se necessário
 });
 
+// Página de vendas
+router.get('/vendas', (req, res) => {
+  if (req.session && req.session.usuario) {
+    res.render('vendas', { usuario: req.session.usuario });
+  } else {
+    res.redirect('/'); // Redirecionar para a página de login se o usuário não estiver autenticado
+  }
+});
+
+// Página de cadastro de item
+router.get('/cadastro-item', (req, res) => {
+  if (req.session && req.session.usuario) {
+    res.render('cadastro-item', { usuario: req.session.usuario });
+  } else {
+    res.redirect('/'); // Redirecionar para a página de login se o usuário não estiver autenticado
+  }
+});
+
+
+
 // Processar o cadastro
 router.post('/register', (req, res) => {
   const { usuario, email, endereco, senha } = req.body;
@@ -123,7 +143,7 @@ router.post('/login', (req, res) => {
     }
     if (row) {
       req.session.usuario = usuario;  // Configurar o nome de usuário na sessão
-      res.redirect('/home');  // Redireciona para a página inicial se o login for bem-sucedido
+      res.redirect('/vendas');  // Redireciona para a página inicial se o login for bem-sucedido
     } else {
       res.send('Usuário ou senha incorretos');  // Mostra mensagem de erro
     }

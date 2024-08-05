@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="vendasstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo">
+                <div class="text">GEST<br><div id="soft-texto">SOFT</div></div>
+            </div>
+            <div class="user-info">
+                <div class="power-icon">⏻</div>
+                <div class="user-name">Maurício <a href="/"><button>sair</button></a></div>
+            </div>
+            <div class="menu">
+                <a href="/vendas"><button class="menu-item"><span class="icon">🏃</span> Vendas</button></a>
+                <button class="menu-item"><span class="icon">💰</span> Financeiro</button>
+                <button class="menu-item"><span class="icon">🧾</span> Nota Fiscal</button>
+                <a href="/cadastro-item"><button class="menu-item"><span class="icon">👥</span> Cadastros</button></a>
+                <button class="menu-item"><span class="icon">🏢</span> Minha Empresa</button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="header">
+                <button class="primary-action">Vendas</button>
+                <p>Crie e gerencie suas vendas</p>
+            </div>
+            <a href="/cadastro-item"><button class="new-sale">Nova Venda</button></a>
+            <div class="sales-table">
+                <div class="table-header">
+                    <div class="table-header-cell">Valor</div>
+                    <div class="table-header-cell">Vendedor</div>
+                </div>
+                <div class="table-row">
+                    <div class="sale-info">
+                        <span class="sale-title">Venda</span>
+                        <span class="sale-nf">NF: 221654555487</span>
+                    </div>
+                    <div class="sale-value">R$ 377,00</div>
+                    <div class="sale-vendor">Maurício</div>
+                </div>
+                <div class="table-row">
+                    <div class="sale-info">
+                        <span class="sale-title">Venda</span>
+                        <span class="sale-nf">NF: 225785123014</span>
+                    </div>
+                    <div class="sale-value">R$ 50,00</div>
+                    <div class="sale-vendor">Maurício</div>
+                </div>
+                <div class="table-row">
+                    <div class="sale-info">
+                        <span class="sale-title">Venda</span>
+                        <span class="sale-nf">NF: 278912450127</span>
+                    </div>
+                    <div class="sale-value">R$ 85,50</div>
+                    <div class="sale-vendor">Maurício</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
